@@ -23,8 +23,8 @@ The main objective is to build a machine learning model that can predict the sur
 - Matplotlib
 - Seaborn
 - Scikit-learn
-- Google Colab
 - Joblib
+- Jupyter Notebook / Google Colab
 
 ## 🔄 Machine Learning Workflow
 
@@ -39,7 +39,7 @@ The main objective is to build a machine learning model that can predict the sur
 9. Model training
 10. Model evaluation
 11. Cross-validation
-12. Model comparison
+12. Hyperparameter tuning
 
 ## 🤖 Machine Learning Models
 
@@ -62,9 +62,20 @@ The models are evaluated using:
 - Confusion Matrix
 - 5-Fold Cross-Validation
 
-The SVM model with an RBF kernel achieved a test accuracy of approximately **82.58%** on the held-out test set.
+### KNN Hyperparameter Tuning
 
-The 5-fold cross-validation accuracy for the SVM model was approximately **82.42%**.
+The value of `K` was evaluated from 1 to 21 using 5-fold cross-validation.
+
+- **Best K:** 4
+- **Average Cross-Validation Accuracy:** 82.70%
+
+### SVM Evaluation
+
+The SVM model uses an RBF kernel.
+
+- **Test Accuracy:** 82.58%
+- **Training Accuracy:** 83.68%
+- **5-Fold Cross-Validation Accuracy:** 82.42%
 
 ## 📈 Results
 
@@ -73,9 +84,11 @@ The 5-fold cross-validation accuracy for the SVM model was approximately **82.42
 | Class | Precision | Recall | F1-Score |
 |-------|-----------|--------|----------|
 | 0     | 0.84      | 0.88   | 0.86     |
-| 1     | 0.80      | 0.74   | 0.77      |
+| 1     | 0.80      | 0.74   | 0.77     |
 
 **Test Accuracy:** 82.58%
+
+**Training Accuracy:** 83.68%
 
 **5-Fold Cross-Validation Accuracy:** 82.42%
 
@@ -85,13 +98,28 @@ The complete implementation is available in:
 
 `titanic.ipynb`
 
-The notebook contains the complete workflow including data exploration, preprocessing, model training, evaluation, confusion matrices, and cross-validation.
+The notebook contains the complete workflow including:
+
+- Data exploration
+- Data preprocessing
+- Missing-value handling
+- Feature encoding
+- Feature scaling
+- Model training
+- Hyperparameter tuning
+- Confusion matrices
+- Classification reports
+- Cross-validation
 
 ## ▶️ Run the Project
 
-You can run the notebook directly using Google Colab.
+The notebook can be opened and executed using **Google Colab** or **Jupyter Notebook**.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAIKUMAR264/Titanic-survival-project-using-ml/blob/main/titanic.ipynb)
+### Google Colab
+
+Open the notebook directly in Google Colab:
+
+[Open Titanic Project in Google Colab](https://colab.research.google.com/github/JAIKUMAR264/Titanic-survival-project-using-ml/blob/main/titanic.ipynb)
 
 ## 📁 Project Structure
 
